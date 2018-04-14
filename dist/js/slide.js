@@ -12,16 +12,8 @@ define(["jquery"], function($){
 				left: -770 * iNow
 			}, 300);
 			aBtns.removeClass("active").eq(iNow).addClass("active");
-		}, function(){
-			timer = setInterval(function(){
-				iNow++;
-				tab();
-			}, 3000);
-		});
-		timer = setInterval(function(){
-			iNow++;
-			tab();
-		}, 3000);
+		},start());
+		start();
 		function tab(){
 			aBtns.removeClass("active").eq(iNow).addClass("active");
 			if(iNow == 5){
@@ -38,13 +30,14 @@ define(["jquery"], function($){
 		}
 		aLis.hover(function(){
 			clearInterval(timer);
-		}, function(){
+		}, start());
+		function start(){
+			clearInterval(timer);
 			timer = setInterval(function(){
 				iNow++;
 				tab();
 			}, 3000);
-		});
-		
+		}
 	}
 	return {
 		slide: slide

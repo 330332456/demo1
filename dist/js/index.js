@@ -26,9 +26,6 @@ define(["jquery", "load", "login", "slide", "hover", "scroll", "cart"], function
 			slide.slide();
 			hover.hover();
 			scroll.scroll();
-			$(".nav").find(".right").find("button").click(function(){
-				window.location.href = "account.html";
-			});
 			$(".surprise").find("button").click(function(){
 				window.location.href = "details.html?id=7"
 			})

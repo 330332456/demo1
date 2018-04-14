@@ -36,7 +36,7 @@ define(["jquery", "jquery-cookie"], function($){
 							});
 						}
 					}
-					alert($.cookie("carts"));
+					alert("添加成功");
 				})
 			})(i);
 				
@@ -46,12 +46,18 @@ define(["jquery", "jquery-cookie"], function($){
 				url: "data/shop.json",
 				type: "get",
 				success:function(res){
+					
 					var cookieArr = eval($.cookie("carts"));
 					var html = '';
 					var shopArr = res[0].recommend;
 					for (var i in cookieArr) {
-						var obj = shopArr[cookieArr[i].id - 1];
-						html += `<tr><td>${obj.game}</td><td>${obj.name}</td><td>${obj.price}QB</td><td>${cookieArr[i].num}</td></tr>`
+						var arr = place(res, cookieArr[i].id);
+						for ( var j in arr) {
+							if (arr[j].id == cookieArr[i].id) {
+								var obj = arr[j];
+								html += `<tr><td>${obj.game || "腾讯游戏"}</td><td>${obj.name}</td><td>${obj.price}QB</td><td>${cookieArr[i].num}</td></tr>`;
+							}
+						}
 					}
 					$(".cart").find("tbody").html(html);
 				}
@@ -60,6 +66,9 @@ define(["jquery", "jquery-cookie"], function($){
 		},function(){
 			$(".cart").css("display", "none");	
 		})
+		$(".nav").find(".right").find("button").click(function(){
+			window.location.href = "account.html";
+		});
 	}
 	return {
 		cart: cart

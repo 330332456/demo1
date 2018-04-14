@@ -14,7 +14,7 @@ require.config({
 define(["jquery", "login", "cart", "magnify"], function($, login, cart, magnify){
 	
 	var start = window.location.search.search("=");
-	var id = window.location.search.substring(start + 1);
+	var id = window.location.search.substring(start + 1) || 1;
 	var details = function(){
 		$(function(){
 			login.login();
@@ -24,29 +24,7 @@ define(["jquery", "login", "cart", "magnify"], function($, login, cart, magnify)
 				url:"data/shop.json",
 				success:function(res){
 					var html = "";
-					if (id >= 1 && id <= 6) {
-						var arr = res[0].recommend;
-					} else if(id >= 13 && id <= 20){
-						var arr = res[3].division[0].list;
-					} else if(id >= 26 && id <= 33){
-						var arr = res[3].division[1].list;
-					} else if(id >= 39 && id <= 46){
-						var arr = res[3].division[2].list;
-					} else if(id >= 52 && id <= 59){
-						var arr = res[3].division[3].list;
-					} else if(id >= 21 && id <= 25){
-						var arr = res[3].division[0].ranking;
-					} else if(id >= 34 && id <= 38){
-						var arr = res[3].division[1].ranking;
-					} else if(id >= 47 && id <= 51){
-						var arr = res[3].division[2].ranking;
-					} else if(id >= 60 && id <= 64){
-						var arr = res[3].division[3].ranking;
-					} else if(id >= 8 && id <= 12){
-						var arr = res[2].hobby;
-					} else if(id = 7){
-						var arr = res[1].surprise;
-					}
+					var arr = place(res, id);
 					
 					
 					for (var i = 0; i < arr.length; i++) {
@@ -58,6 +36,41 @@ define(["jquery", "login", "cart", "magnify"], function($, login, cart, magnify)
 					
 					$(".goodsbox").html(html);
 					magnify.magnify();
+					$("#addCart").click(function(){
+						var first = $.cookie("carts") == null ? true : false;
+						if (first) {
+							$.cookie("carts", `[{id:${id},num:1}]`,{
+								expires: 7
+							});
+						} else{
+							var str = $.cookie("carts");
+							var arr = eval(str);
+							var same = false;
+							for(var j in arr){
+								if (arr[j].id == id) {
+									arr[j].num += 1;
+									var cookieStr = JSON.stringify(arr);
+									$.cookie("carts", cookieStr, {
+										expires: 7
+									});
+									same = true;
+									break;
+								} 
+							}
+							if(!same){
+								var obj = {
+									id: id,
+									num: 1
+								};
+								arr.push(obj);
+								var cookieStr = JSON.stringify(arr);
+								$.cookie("carts", cookieStr, {
+									expires: 7
+								});
+							}
+						}
+						alert("添加成功");
+					})
 				}
 			});
 			$("#dl1").on("mouseover",function(){
@@ -65,7 +78,8 @@ define(["jquery", "login", "cart", "magnify"], function($, login, cart, magnify)
 			});
 			$("#dl1").on("mouseout", function(){
 				$("#dl1").find("dd").css("display", "none");
-			})
+			});
+					
 				
 		})
 	}
