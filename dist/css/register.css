@@ -1,0 +1,119 @@
+h1 {
+  line-height: 43px;
+  padding-left: 46px;
+  margin-left: 30px;
+  margin-top: 18px;
+  float: left;
+  font-size: 36px;
+  background: url(../images/logo.png) no-repeat;
+  background-size: 36px 43px;
+  z-index: 2; }
+
+h2 {
+  padding-top: 50px;
+  font-size: 44px;
+  margin-bottom: 20px; }
+
+h3 {
+  font-size: 28px;
+  margin-bottom: 32px; }
+
+.left {
+  position: fixed;
+  height: 100%;
+  width: 480px;
+  background: url(../images/01-1.jpg) no-repeat;
+  background-size: 480px; }
+
+.right {
+  margin-left: 480px; }
+
+.content {
+  width: 480px;
+  margin-left: 160px; }
+
+input[type="text"], input[type="password"] {
+  border: 1px #aaa solid;
+  border-radius: 4px;
+  background: 0 0;
+  text-align: left;
+  font-size: 20px;
+  width: 438px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  margin-top: 32px;
+  transition: .2s; }
+
+input[type="text"]:hover, input[type="password"]:hover {
+  border-color: #777; }
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #549df8; }
+
+input[type="button"], input[type="submit"] {
+  border: 1px #3083ff solid;
+  border-radius: 4px;
+  background-color: #3487ff;
+  box-shadow: 0 5px 8px 0 rgba(24, 95, 255, 0.1);
+  color: #fff;
+  text-align: center;
+  width: 478px;
+  height: 60px;
+  margin: 40px 0 8px;
+  font-size: 24px; }
+
+.content p {
+  line-height: 26px;
+  padding-left: 24px;
+  font-size: 14px; }
+
+.content div {
+  height: 0;
+  display: none; }
+
+.list > p {
+  display: none;
+  height: 0; }
+
+.content .check {
+  margin-top: 30px;
+  line-height: 18px;
+  font-size: 13px;
+  color: #aaa;
+  height: 100px;
+  display: block; }
+
+.check-img {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding-left: 20px;
+  margin: 6px 0;
+  float: left;
+  background: url(../images/checkbox_check.png) no-repeat; }
+
+#agree {
+  display: none; }
+
+.content .footer {
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
+  margin: 30px 0;
+  font-weight: lighter;
+  display: block; }
+
+.error {
+  color: #ff5b5b;
+  background: url(../images/error.png) no-repeat 0 4px; }
+
+.info {
+  background: url(../images/info.png) no-repeat 0 4px; }
+
+.green {
+  background: url(../images/green.png) no-repeat 0 4px; }
+
+.username {
+  height: 52px; }

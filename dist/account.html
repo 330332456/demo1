@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/account.css"/>
+		<script src="js/require.js" defer async="true" data-main="js/account.js"></script>
+        <script>
+        	window.onload = function(){
+				require(["account"], function(account){
+					account.account();
+				})
+			}
+        </script>
+	</head>
+	<body>
+		<div class="header">
+            <div class="cl">
+                <ul class="left">
+                    <li>
+                        <img src="" alt="">
+                        <a href="#">手机版</a>
+                    </li>
+                    <li>
+                        <a href="#">游戏币交易</a>
+                    </li>
+                    <li>
+                        <a href="#">Q币充值</a>
+                    </li>
+                    <li>
+                        <a href="#">心悦游戏家</a>
+                    </li>
+                </ul>
+                <ul class="right">
+                    <li>
+                        <span>您还未登录，请</span>
+                        <a href="" class="login-btn">登录</a>
+                    </li>
+                    <li>
+                        <a href="">我的订单</a>
+                    </li>
+                    <li>
+                        <a href="">个人中心</a>
+                    </li>
+                    <li>
+                        <a href="">官方论坛</a>
+                    </li>
+                    <li>
+                        <a href="">帮助中心</a>
+                    </li>
+                    <li>
+                        <a href="">游戏导航</a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="search">
+            <div class="cl">
+                <h1>
+                    <a href=""></a>
+                </h1>
+				<div class="seek">
+					<a href="">
+						<div class="left">选择游戏<i></i></div>
+					</a>
+	                <input type="text" class="text"/>
+	                <button class="right"></button>
+	            </div>
+	            <div class="code">
+	            	<a href=""></a>
+	            </div>
+            </div>
+        </div>
+        <div class="nav">
+        	<div class="warp">
+        		
+        		<div class="center">
+        			<a href="#">首页</a>
+	    			<a href="#">活动中心</a>
+	    			<a href="#">聚诚品</a>
+	    			<a href="#">手游中心</a>
+	    			<a href="#">聚豆商城</a>
+	    			<a href="#">个人中心</a>
+        		</div>
+        		<div class="right">
+        			<button>购物车</button>
+		    		<div class="cart">
+		    			<table border="" cellspacing="" cellpadding="">
+		    				<thead>
+		    					<tr>
+		    						<th>游戏</th>
+		    						<th>道具名</th>
+		    						<th>单价</th>
+		    						<th>数量</th>
+		    						<th>操作</th>
+		    					</tr>
+		    				</thead>
+		    				<tbody></tbody>
+		    			</table>
+		    		</div>
+        		</div>
+		    		
+        	</div>
+        </div>
+		
+		<div class="main">
+			<h3>商品信息</h3>
+			<div class="tablebox">
+				<table border="" cellspacing="" cellpadding="">
+					<thead>
+						<tr>
+							<th>商品名称</th>
+							<th>类型</th>
+							<th>单价</th>
+							<th>期限</th>
+							<th>数量</th>
+							<th>优惠</th>
+							<th>小计</th>
+							<th>操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<!--<tr>
+							<td>name</td>
+							<td>虚拟道具</td>
+							<td>99.00Q币</td>
+							<td>永久</td>
+							<td>-1+</td>
+							<td>无优惠</td>
+							<td>99.00币</td>
+							<td><a href="">删除</a></td>
+						</tr>-->
+					</tbody>
+				</table>
+			</div>
+			<div class="sumprice">
+				<h3>您的优惠信息</h3>
+				<p>优惠券总数：0 <a href="如何获得优惠券>>"></a></p>
+				<div class="submit">
+					<a href="">英雄联盟周边商城火热上线查看详情</a>
+					总价为：<span>0.00</span>Q币
+					<button>立即支付</button>
+				</div>
+				<h3>温馨提示：</h3>
+				<p>"LOL优惠券使用规则：[道具包]分类道具全场无法使用，每张优惠券的信息，请仔细核对以下信息：订单满减的金额是否符合要求、优惠券限定可用的道具范围。"</p>
+				<p>"购买成功后系统会自动发货，如发货失败24小时内会自动补发。"</p>
+				<p>"请确认游戏中是否存在购物车中的英雄或皮肤，如果存在，请勿重复购买。"</p>
+				<p>"请重新登录游戏查收物品。"</p>
+			</div>
+		</div>
+		
+		<div class="footer">
+        	<div class="help cl">
+        		<ul>
+        			<li>
+        				<dl>
+        					<dt><i></i>我是新手</dt>
+        					<dd><a href="">什么是道聚城</a></dd>
+        					<dd><a href="">如何购买</a></dd>
+        					<dd><a href="">如何赠送</a></dd>
+        					<dd><a href="">如何获取聚豆</a></dd>
+        				</dl>
+        			</li>
+        			<li>
+        				<dl>
+        					<dt><i></i>个人中心</dt>
+        					<dd><a href="">发货时间</a></dd>
+        					<dd><a href="">如何领取</a></dd>
+        					<dd><a href="">补发规则</a></dd>
+        					<dd><a href="">Vip价定义</a></dd>
+        					<dd><a href="">道具状态定义</a></dd>
+        				</dl>
+        			</li>
+        			<li>
+        				<dl>
+        					<dt><i></i>支付方式</dt>
+        					<dd><a href="">支付方式</a></dd>
+        					<dd><a href="">购物点支付</a></dd>
+        					<dd><a href="">如何充值</a></dd>
+        				</dl>
+        			</li>
+        			<li>
+        				<dl>
+        					<dt><i></i>腾讯在线服务</a></dt>
+        					<dd><a href="">腾讯官方在线客服</a></dd>
+        				</dl>
+        			</li>
+        		</ul>
+        		<div>
+        			<img src="images/two1.png"/>
+        			<p>掌上道聚城</p>
+        		</div>
+        		<div>
+        			<img src="images/two2.png"/>
+        			<p>道聚城公众号</p>
+        		</div>
+        	</div>
+        	<div class=" copyright">
+				<p>
+					<a href="">腾讯互动娱乐</a> | <a href="">服务条款</a> | <a href="">广告服务</a> | <a href="">腾讯游戏招聘</a> | <a href="">腾讯游戏客服</a> | <a href="">游戏地图</a> | <a href="">成长守护平台</a> | <a href="">商务合作</a> | <a href="">网站导航</a>
+				</p>
+				<p>COPYRIGHT © 1998 – 2018 TENCENT. ALL RIGHTS RESERVED.</p>
+				<p><a href="">腾讯公司 版权所有</a></p>
+        	</div>
+        </div>
+        
+        
+        <div class="full-screen">
+        	<div class = "login">
+    			<button id="login-close">X</button>
+        		<form action="php/login.php" method="post" >
+		        	<h3>账号密码登陆</h3>
+		        	<input type="text" id="username" name="username" id="username" placeholder="支持QQ号/邮箱/手机登录"/>
+		        	<input type="password" id="password" name="password" id="password" placeholder="密码"/>
+		        	<input type="button" id="login" value="登录"/>
+        		</form>
+	        	<a href="register.html">注册账号</a>
+	        </div>
+        </div>
+	</body>
+</html>

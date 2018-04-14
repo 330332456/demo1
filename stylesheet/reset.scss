@@ -1,0 +1,19 @@
+@charset "utf-8";
+/*************************** css reset **************************/
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,input,textarea,button,select{padding:0;margin:0;}
+h1,h2,h3,h4,h5,h6{font-weight: 100;}
+body{font-size:12px;}
+img{border:0;vertical-align:middle;}
+ul,ol{list-style:none;}
+input:focus,textarea:focus,button:focus{outline: none;}
+input[type="button"],input[type="submit"],input[type="file"],input[type="reset"],button{cursor: pointer;}
+a{text-decoration:none;color:black;}
+a:hover{color:red;}
+
+/************************* common **************************/
+.cl:after{content: "";display: block;clear: both;height: 0;overflow: hidden;visibility: hidden;}
+.cl{zoom: 1;}
+.textoverflow{overflow: hidden;white-space: nowrap;text-overflow:ellipsis;}
+.m0{margin:0;}
+.font12{font-size: 12px;}
+.gWimdth{width: 1200px;margin: auto;}
