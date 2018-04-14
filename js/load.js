@@ -16,7 +16,7 @@ define(["jquery", "cart"], function($, cart){
 						html1 = oDd.find("div").html() + "<ul></ul>"
 						oDd.find("div").html(html1);
 						for(var k = 0; k < res[i].list[j].length; k++){
-							html2 += `<li><a href="">${res[i].list[j][k]}<a></li>`;
+							html2 += `<li><a href="list.html">${res[i].list[j][k]}<a></li>`;
 						}
 						oDd.find("div").find("ul").eq(j).html(html2);
 						html2 = "";

@@ -28,6 +28,9 @@ define(["jquery", "load", "login", "slide", "hover", "scroll", "cart"], function
 			scroll.scroll();
 			$(".nav").find(".right").find("button").click(function(){
 				window.location.href = "account.html";
+			});
+			$(".surprise").find("button").click(function(){
+				window.location.href = "details.html?id=7"
 			})
 		})
 	}

@@ -406,22 +406,22 @@
   line-height: 22px;
   position: relative; }
 
-.surprise img {
+.surprise .content img {
   display: block;
   width: 190px;
   height: 162px;
   margin-bottom: 5px; }
 
-.surprise p {
+.surprise .content p {
   line-height: 22px; }
 
-.surprise span {
+.surprise .content span {
   font-weight: bold; }
 
-.surprise .div {
+.surprise .content .div {
   color: red; }
 
-.surprise button {
+.surprise .content button {
   width: 190px;
   height: 25px;
   line-height: 26px;
@@ -485,7 +485,7 @@
   height: 176px;
   text-align: center; }
 
-.sign button {
+.sign .content button {
   color: #fff;
   text-decoration: none;
   background: #f74a4a;
@@ -500,7 +500,7 @@
   margin-top: 15px;
   margin-bottom: 20px; }
 
-.sign p {
+.sign .content p {
   margin-bottom: 5px;
   line-height: 19px;
   text-align: center; }

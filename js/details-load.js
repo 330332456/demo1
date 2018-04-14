@@ -1,7 +1,7 @@
 define(["jquery"], function($){
 	var load = function(){
 		alert(1)
-		$.ajax({
+		/*$.ajax({
 			url:"data/sort.json",
 			type:"GET",
 			success:function(res){
@@ -41,7 +41,7 @@ define(["jquery"], function($){
 				}
 				$(".goodsbox").html(html);
 			}
-		});
+		});*/
 	}
 	return {
 		load: load

@@ -44,6 +44,8 @@ define(["jquery", "login", "cart", "magnify"], function($, login, cart, magnify)
 						var arr = res[3].division[3].ranking;
 					} else if(id >= 8 && id <= 12){
 						var arr = res[2].hobby;
+					} else if(id = 7){
+						var arr = res[1].surprise;
 					}
 					
 					

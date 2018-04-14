@@ -51,7 +51,7 @@ define(["jquery", "jquery-cookie"], function($){
 					var shopArr = res[0].recommend;
 					for (var i in cookieArr) {
 						var obj = shopArr[cookieArr[i].id - 1];
-						html += `<tr><td>${obj.game}</td><td>${obj.name}</td><td>${obj.price}QB</td><td>${cookieArr[i].num}</td><td>+-</td></tr>`
+						html += `<tr><td>${obj.game}</td><td>${obj.name}</td><td>${obj.price}QB</td><td>${cookieArr[i].num}</td></tr>`
 					}
 					$(".cart").find("tbody").html(html);
 				}
