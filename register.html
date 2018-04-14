@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>QQ注册</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<script src="js/require.js" defer async="true" data-main="js/register.js"></script>
+        <script>
+        	window.onload = function(){
+				require(["register"], function(register){
+					register.register();
+				})
+			}
+        </script>
+	</head>
+	<body>
+		<div class="left">
+			<h1>QQ</h1>
+			<i></i>
+		</div>
+		<div class="right">
+			<div class="content">
+				<h2>欢迎注册QQ</h2>
+				<h3>每一天，乐在沟通。</h3>
+				<form action="php/register.php" method="post" class="list">
+					<input type="text" name="name" id="name" placeholder="昵称"/>
+					<p class="error">昵称不能为空</p>
+					<p class="error">不能超过24个字母或12个汉字</p>
+					<input type="text" name="username" id="username" placeholder="用户名"/>
+					<div class="username">
+						<p class="green">不能包含空格</p>
+						<p class="info">不能超过12位</p>
+					</div>
+					<p class="error">用户名不能为空</p>
+					<p class="error">不能包含空格</p>
+					<p class="error">不能超过12位</p>
+					<input type="password" name="password" id="password" placeholder="密码"/>
+					<div class="password">
+						<p class="green">不能包含空格</p>
+						<p class="info">长度为8-16个字符</p>
+						<p class="info">首位必须为字母</p>
+					</div>
+					<p class="error">密码不能为空</p>
+					<p class="error">不能包含空格</p>
+					<p class="error">长度为8-16个字符</p>
+					<p class="error">首位必须为字母</p>
+					<input type="button" name="regist" value="立即注册" id="regist" />
+					<div class="check">
+						<label for="agree" class="check-img">我已阅读并同意相关服务条款和隐私政策 </label>
+						<input type="checkbox" name="" id="agree" value="" checked="checked" />
+						
+					</div>
+					<div class="footer">
+						Copyright © 1998-2018Tencent All Rights Reserved
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
